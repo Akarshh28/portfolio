@@ -21,6 +21,10 @@ export default function Navbar() {
             About
           </a>
 
+          <a href="#education" className="hover:text-blue-600 transition">
+            Education
+          </a>
+
           <a href="#experience" className="hover:text-blue-600 transition">
             Experience
           </a>
