@@ -1,13 +1,22 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants  } from "framer-motion";
 import portfolio from "@/data/portfolio";
 
-const fadeUp = (delay: number = 0) => ({
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6, delay, ease: "easeOut" },
+const fadeUp = (delay = 0): Variants => ({
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay,
+      ease: [0.25, 0.1, 0.25, 1],
+    },
+  },
 });
 
 export default function Research() {
@@ -15,7 +24,13 @@ export default function Research() {
     <section id="research" className="py-28 px-6 bg-[#070B11]">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
-        <motion.div {...fadeUp()} className="mb-14">
+        <motion.div
+  variants={fadeUp()}
+  initial="initial"
+  whileInView="whileInView"
+  viewport={{ once: true }}
+  className="mb-14"
+>
           <p className="section-label mb-3">Research Interests</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
             Areas I <span className="gradient-text">explore</span>
