@@ -41,17 +41,17 @@ const portfolio = {
     {
       category: "Programming Languages",
       icon: "⌨️",
-      items: ["Python", "C"],
+      items: ["Python", "C", "C++"],
     },
     {
       category: "AI & Machine Learning",
       icon: "🧠",
-      items: ["Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Jupyter Notebook"],
+      items: ["Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Jupyter Notebook", "Machine Learning"],
     },
     {
       category: "Computer Vision",
       icon: "👁️",
-      items: ["OpenCV", "MediaPipe", "YOLO", "Image Processing"],
+      items: ["OpenCV", "MediaPipe", "YOLO"],
     },
     {
       category: "Firmware & Security",
@@ -61,7 +61,7 @@ const portfolio = {
     {
       category: "Embedded Systems",
       icon: "🔌",
-      items: ["Arduino UNO", "HC-05 Bluetooth", "L298N Motor Driver", "Serial Communication"],
+      items: ["Arduino UNO", "HC-05 Bluetooth", "L298N Motor Driver", "Serial Communication", "ARM Cortex-M"],
     },
     {
       category: "Developer Tools",
@@ -71,7 +71,7 @@ const portfolio = {
     {
       category: "Currently Learning",
       icon: "📚",
-      items: ["PyTorch", "TensorFlow", "Next.js", "Docker", "Symbolic Execution"],
+      items: ["DSA", "Deep Learning"],
     },
   ],
 
@@ -96,23 +96,26 @@ const portfolio = {
     {
       degree: "B.Tech in Electronics & Communication Engineering",
       institution: "Bundelkhand Institute of Engineering & Technology, Jhansi",
-      duration: "2023 – 2027 (Expected)",
-      cgpa: "7.72",
+      duration: "2024 – 2028",
+      cgpa: "7.72(upto 4th Semester)",
       coursework: [
         "Digital Signal Processing",
-        "Embedded Systems",
+        "Digital Electronics",
         "Microprocessors",
         "Communication Systems",
-        "Control Systems",
-        "Data Structures",
       ],
     },
     {
-      degree: "Class XII (PCM + Computer Science)",
-      institution: "S.S.M. Inter College, Varanasi",
+      degree: "Class XII ",
+      institution: "The Aryan International School, Varanasi",
       duration: "2021 – 2023",
-      cgpa: "79.8%",
-      coursework: [],
+      cgpa: "85%",
+    },
+    {
+      degree: "Class X ",
+      institution: "International Hindu School, Varanasi",
+      duration: "2008 – 2021",
+      cgpa: "91%",
     },
   ],
 
@@ -135,11 +138,12 @@ const portfolio = {
       title: "Linear Regression vs Random Forest — World Happiness Dataset",
       year: "2026",
       description:
-        "Comparative ML study predicting national happiness scores, benchmarking regression and ensemble methods on real-world data.",
-      highlights: [
-        "Performed EDA, feature engineering, and correlation analysis on the World Happiness Report dataset",
-        "Evaluated models using MAE, MSE, RMSE, and R² metrics; Random Forest outperformed by 23% in accuracy",
-        "Visualized feature importance and prediction residuals with Matplotlib and Seaborn",
+        "Comparative ML pipeline predicting global happiness scores, benchmarking linear regression and ensemble methods on socio-economic indicators.", 
+        highlights: [
+        "Conducted end-to-end EDA, feature selection, and correlation mapping on the World Happiness Report dataset using Pandas and NumPy.",
+    "Optimized a Linear Regression model to achieve an outstanding 98.27% R² score, evaluating performance against a tuned Random Forest Regressor.",
+    "Systematically validated model accuracy utilizing statistical evaluation metrics including MAE, MSE, and RMSE.",
+    "Engineered diagnostic data visualizations, mapping regression trends and prediction residuals via Matplotlib and Seaborn."
       ],
       tools: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "Jupyter Notebook"],
       github:
@@ -189,28 +193,10 @@ const portfolio = {
 
   certifications: [
     {
-      title: "NPTEL — Python for Data Science",
-      organization: "IIT Madras via NPTEL",
-      date: "2024",
-      icon: "🐍",
-    },
-    {
-      title: "Ethical Hacking Essentials (EHE)",
-      organization: "EC-Council (Coursera)",
-      date: "2024",
-      icon: "🛡️",
-    },
-    {
-      title: "Computer Vision Fundamentals",
-      organization: "OpenCV University",
-      date: "2024",
-      icon: "👁️",
-    },
-    {
-      title: "Machine Learning — Supervised Learning",
-      organization: "Kaggle",
+      title: "Summer Analytics'25",
+      organization: "C&AC IIT Guwahati",
       date: "2025",
-      icon: "🤖",
+      icon: "🐍",
     },
   ],
 

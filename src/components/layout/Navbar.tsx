@@ -10,6 +10,7 @@ import portfolio from "@/data/portfolio";
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#stack", label: "Stack" },
+  { href: "#education", label: "Education" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#research", label: "Research" },

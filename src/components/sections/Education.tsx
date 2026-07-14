@@ -1,7 +1,5 @@
 "use client";
 
-"use client";
-
 import { motion, type Variants } from "framer-motion";
 import portfolio from "@/data/portfolio";
 
@@ -63,7 +61,7 @@ export default function Education() {
                   </div>
                 </div>
 
-                {edu.coursework.length > 0 && (
+                {edu.coursework?.length ? (
                   <div>
                     <p className="text-xs text-slate-600 uppercase tracking-wider mb-3">Key Coursework</p>
                     <div className="flex flex-wrap gap-2">
@@ -77,7 +75,7 @@ export default function Education() {
                       ))}
                     </div>
                   </div>
-                )}
+                ): null}
               </div>
             </motion.div>
           ))}
