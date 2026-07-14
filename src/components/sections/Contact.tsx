@@ -1,62 +1,149 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 import portfolio from "@/data/portfolio";
 
-export default function Contact() {
-  return (
-    <section id="contact" className="py-24 px-6 bg-slate-950 text-white">
-      <div className="max-w-3xl mx-auto text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-6"
-        >
-          Get In Touch
-        </motion.h2>
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: {
+    duration: 0.6,
+    delay,
+    ease: [0.25, 0.1, 0.25, 1] as const,
+  },
+});
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-slate-300 mb-10"
-        >
-          I am always open to discussing new projects, research opportunities,
-          or just having a conversation about AI, ML, and embedded systems.
-          Feel free to reach out.
-        </motion.p>
+export default function Contact() {
+  const contactItems = [
+    {
+      label: "Email",
+      value: portfolio.email,
+      href: `mailto:${portfolio.email}`,
+      icon: "✉️",
+    },
+    {
+      label: "Phone",
+      value: portfolio.phone,
+      href: `tel:${portfolio.phone.replace(/-/g, "")}`,
+      icon: "📞",
+    },
+    {
+      label: "GitHub",
+      value: "Akarshh28",
+      href: portfolio.github,
+      icon: "🐙",
+    },
+    {
+      label: "LinkedIn",
+      value: "akarsh-pandey",
+      href: portfolio.linkedin,
+      icon: "💼",
+    },
+    {
+      label: "Location",
+      value: portfolio.location,
+      href: "",
+      icon: "📍",
+    },
+    {
+      label: "Resume",
+      value: "Download PDF",
+      href: portfolio.resume,
+      icon: "📄",
+    },
+  ];
+
+  return (
+    <section id="contact" className="py-28 px-6 bg-[#0D1117]">
+      <div className="max-w-4xl mx-auto">
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-5"
+          {...fadeUp()}
+          className="mb-5"
         >
-          <a href={"mailto:" + portfolio.email} className="flex items-center gap-2 rounded-xl bg-cyan-500 px-6 py-3 font-semibold hover:bg-cyan-400 transition">
-            <FaEnvelope />
-            Email
-          </a>
+          <p className="section-label mb-3">
+            Contact
+          </p>
 
-          <a href="tel:+918400726094" className="flex items-center gap-2 rounded-xl border border-slate-600 px-6 py-3 hover:bg-slate-800 transition">
-            <FaPhone />
-            +91-8400726094
-          </a>
-
-          <a href={portfolio.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-xl border border-slate-600 px-6 py-3 hover:bg-slate-800 transition">
-            <FaGithub />
-            GitHub
-          </a>
-
-          <a href={portfolio.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-xl border border-slate-600 px-6 py-3 hover:bg-slate-800 transition">
-            <FaLinkedin />
-            LinkedIn
-          </a>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white">
+            Let&apos;s <span className="gradient-text">Connect</span>
+          </h2>
         </motion.div>
+
+        <motion.p
+          {...fadeUp(0.1)}
+          className="text-slate-400 text-lg mb-14 leading-relaxed"
+        >
+          Always open to discussing new projects, research collaborations,
+          internships, and opportunities in AI/ML, Computer Vision,
+          Software Engineering, and Cybersecurity.
+        </motion.p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          {contactItems.map((item, index) => (
+
+            <motion.div
+              key={item.label}
+              {...fadeUp(index * 0.08)}
+            >
+
+              {item.href ? (
+
+                <a
+                  href={item.href}
+                  target={item.href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    item.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="glass glass-hover rounded-2xl border border-white/5 p-5 flex gap-4"
+                >
+                  <span className="text-2xl">
+                    {item.icon}
+                  </span>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-slate-500">
+                      {item.label}
+                    </p>
+
+                    <p className="text-white font-medium mt-1">
+                      {item.value}
+                    </p>
+                  </div>
+                </a>
+
+              ) : (
+
+                <div className="glass rounded-2xl border border-white/5 p-5 flex gap-4">
+
+                  <span className="text-2xl">
+                    {item.icon}
+                  </span>
+
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-slate-500">
+                      {item.label}
+                    </p>
+
+                    <p className="text-white font-medium mt-1">
+                      {item.value}
+                    </p>
+                  </div>
+
+                </div>
+
+              )}
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
       </div>
     </section>
   );

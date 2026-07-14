@@ -1,70 +1,127 @@
 "use client";
 
 import { motion } from "framer-motion";
+import portfolio from "@/data/portfolio";
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: {
+    duration: 0.6,
+    delay,
+    ease: [0.25, 0.1, 0.25, 1] as const,
+  },
+});
+
+const cards = [
+  {
+    label: "Introduction",
+    icon: "👋",
+    content:
+      "I'm an Electronics & Communication Engineering student at BIET Jhansi with a strong focus on AI, Machine Learning, Computer Vision, and Cybersecurity. I build projects that bridge hardware and software — from real-time computer vision systems to firmware security research tools.",
+  },
+  {
+    label: "Current Focus",
+    icon: "🔬",
+    content:
+      "Currently a Project Intern at C3iHub, IIT Kanpur — researching automated firmware vulnerability analysis for DLMS/COSEM-compliant smart meters in Advanced Metering Infrastructure (AMI). Building an AI-assisted static analysis pipeline.",
+  },
+  {
+    label: "Interests",
+    icon: "⚡",
+    content:
+      "Deeply interested in the intersection of AI and security. I enjoy reverse engineering, embedded systems programming, building ML pipelines, and deploying real-time computer vision systems on constrained hardware.",
+  },
+  {
+    label: "Goals",
+    icon: "🎯",
+    content:
+      "Aiming to contribute to cutting-edge research in AI-powered cybersecurity and embedded intelligence. Seeking opportunities in AI/ML Engineering, Computer Vision, Software Engineering, and Cybersecurity research roles.",
+  },
+];
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-slate-950 text-white">
-      <div className="max-w-4xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-bold mb-8 text-center"
+    <section id="about" className="py-28 px-6 bg-[#070B11]">
+      <div className="max-w-6xl mx-auto">
+
+        {/* Section Header */}
+        <motion.div
+          {...fadeUp()}
+          className="mb-14"
         >
-          About Me
-        </motion.h2>
+          <p className="section-label mb-3">
+            About Me
+          </p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-lg text-slate-300 leading-8 text-center mb-12"
+          <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+            Building at the edge of{" "}
+            <span className="gradient-text">
+              AI &amp; Security
+            </span>
+          </h2>
+        </motion.div>
+
+        {/* Stats */}
+        <motion.div
+          {...fadeUp(0.1)}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 glass rounded-2xl border border-white/5 mb-8"
         >
-          I&apos;m an Electronics and Communication Engineering student at
-          Bundelkhand Institute of Engineering and Technology, Jhansi, with a
-          strong interest in Artificial Intelligence, Machine Learning,
-          Computer Vision, and Firmware Security. I enjoy building projects
-          that combine hardware and software, and I&apos;m currently exploring
-          firmware security research for Advanced Metering Infrastructure.
-        </motion.p>
+          {[
+            {
+              value: portfolio.cgpa,
+              label: `CGPA · ${portfolio.cgpaSem}`,
+            },
+            {
+              value: "2+",
+              label: "Projects Built",
+            },
+            {
+              value: "1",
+              label: "Research Internship",
+            },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="text-center"
+            >
+              <p className="text-3xl sm:text-4xl font-bold text-cyan-400">
+                {stat.value}
+              </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="rounded-xl border border-slate-800 p-6 text-center"
-          >
-            <p className="text-3xl font-bold text-cyan-400">7.72</p>
-            <p className="text-slate-400 mt-2">CGPA (till 4th sem)</p>
-          </motion.div>
+              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="rounded-xl border border-slate-800 p-6 text-center"
-          >
-            <p className="text-3xl font-bold text-cyan-400">2+</p>
-            <p className="text-slate-400 mt-2">Projects Built</p>
-          </motion.div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {cards.map((card, index) => (
+            <motion.div
+              key={card.label}
+              {...fadeUp(0.2 + index * 0.1)}
+              className="glass glass-hover rounded-2xl border border-white/5 p-6"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">
+                  {card.icon}
+                </span>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-xl border border-slate-800 p-6 text-center"
-          >
-            <p className="text-3xl font-bold text-cyan-400">1</p>
-            <p className="text-slate-400 mt-2">Research Internship</p>
-          </motion.div>
+                <span className="text-xs font-semibold tracking-widest uppercase text-cyan-400/70">
+                  {card.label}
+                </span>
+              </div>
+
+              <p className="text-slate-400 leading-7">
+                {card.content}
+              </p>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );
