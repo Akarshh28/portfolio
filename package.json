@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "lucide-react": "^1.24.0"
-=======
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^12.42.2",
+    "lucide-react": "^1.24.0",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -29,6 +26,5 @@
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4",
     "typescript": "^5"
->>>>>>> f9990961ff2fac3c9154037055ecc5a48e3474a5
   }
 }
