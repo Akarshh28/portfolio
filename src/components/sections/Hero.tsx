@@ -24,7 +24,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#04070B]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]">
       {/* The new ECE-themed animated background */}
       <ECEBackground />
 

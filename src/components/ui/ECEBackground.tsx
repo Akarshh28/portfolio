@@ -13,7 +13,7 @@ export function ECEBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Deep Dark Base */}
-      <div className="absolute inset-0 bg-[#04070B] z-0" />
+      <div className="absolute inset-0 bg-[#0A0A0A] z-0" />
 
       {/* Subtle ECE Grid / Mesh Overlay */}
       <div 
