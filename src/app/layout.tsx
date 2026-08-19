@@ -40,6 +40,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { Preloader } from "@/components/ui/Preloader";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,6 +53,7 @@ export default function RootLayout({
       className={`${inter.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#070B11] text-white selection:bg-cyan-500/30 selection:text-cyan-200">
+        <Preloader />
         {children}
       </body>
     </html>
