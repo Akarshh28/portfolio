@@ -40,7 +40,7 @@ export default function Hero() {
           {/* Name */}
           <motion.h1
             {...fadeUp(0.2)}
-            className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-4 leading-none"
+            className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[var(--text-primary)] mb-4 leading-none"
           >
             Akarsh <span className="gradient-text">Pandey</span>
           </motion.h1>
@@ -48,7 +48,7 @@ export default function Hero() {
           {/* Primary Headline Hook */}
           <motion.h2
             {...fadeUp(0.3)}
-            className="text-lg sm:text-2xl font-semibold text-slate-200 mb-4 leading-snug tracking-tight max-w-2xl"
+            className="text-lg sm:text-2xl font-semibold text-[var(--text-primary)] mb-4 leading-snug tracking-tight max-w-2xl"
           >
             AI/ML &amp; Firmware Security Researcher{" "}
             <span className="text-cyan-400 font-normal hidden sm:inline">|</span>{" "}
@@ -82,7 +82,7 @@ export default function Hero() {
           {/* Description */}
           <motion.p
             {...fadeUp(0.45)}
-            className="text-slate-400 text-base sm:text-lg leading-relaxed mb-10 max-w-xl text-center lg:text-left"
+            className="text-[var(--text-secondary)] text-base sm:text-lg leading-relaxed mb-10 max-w-xl text-center lg:text-left"
           >
             {portfolio.description}
           </motion.p>
@@ -96,7 +96,7 @@ export default function Hero() {
               href={portfolio.resume}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-[var(--text-primary)] font-semibold rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-cyan-500/20 hover:-translate-y-0.5"
             >
               <FaDownload size={14} />
               View Resume
@@ -104,7 +104,7 @@ export default function Hero() {
 
             <a
               href="#projects"
-              className="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
+              className="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 text-[var(--text-primary)] font-semibold rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
             >
               View Projects
               <FaArrowRight size={12} />
@@ -115,7 +115,7 @@ export default function Hero() {
                 href={portfolio.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
+                className="flex items-center justify-center w-12 h-12 text-[var(--text-secondary)] hover:text-[var(--text-primary)] bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
                 aria-label="GitHub"
               >
                 <FaGithub size={20} />
@@ -125,7 +125,7 @@ export default function Hero() {
                 href={portfolio.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
+                className="flex items-center justify-center w-12 h-12 text-[var(--text-secondary)] hover:text-[var(--text-primary)] bg-white/5 hover:bg-white/10 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-200 hover:-translate-y-0.5"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={20} />
