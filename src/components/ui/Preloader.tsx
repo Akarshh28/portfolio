@@ -25,15 +25,15 @@ export function Preloader() {
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0A0A0A] overflow-hidden"
         >
           {/* Radial Gradient overlay for preloader to match theme */}
-          <div 
-            className="absolute inset-0 z-0 pointer-events-none" 
+          <div
+            className="absolute inset-0 z-0 pointer-events-none"
             style={{
               background: 'radial-gradient(circle at center, #1A1A1D 0%, #050505 100%)'
             }}
           />
 
           {/* Subtle tech background grid for loader */}
-          <div 
+          <div
             className="absolute inset-0 opacity-10 pointer-events-none"
             style={{
               backgroundImage: `
@@ -48,9 +48,9 @@ export function Preloader() {
 
           {/* Central Logo Container */}
           <div className="relative flex flex-col items-center justify-center">
-            
+
             {/* AP Logo Text with glowing effect */}
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -59,10 +59,10 @@ export function Preloader() {
               <h1 className="text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 tracking-tighter">
                 AP
               </h1>
-              
+
               {/* Glowing blur behind AP */}
               <div className="absolute inset-0 blur-xl bg-cyan-500/30 -z-10 animate-pulse rounded-full" />
-              
+
               {/* Scanning line effect over AP */}
               <motion.div
                 initial={{ top: "-10%" }}
@@ -73,7 +73,7 @@ export function Preloader() {
             </motion.div>
 
             {/* Loading text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
@@ -82,25 +82,25 @@ export function Preloader() {
               <span className="text-cyan-400/80 text-sm tracking-[0.3em] font-medium uppercase">
                 System Initializing
               </span>
-              
+
               {/* Progress bar */}
               <div className="w-48 h-1 bg-white/10 rounded-full overflow-hidden relative">
-                <motion.div 
+                <motion.div
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 2, ease: "easeInOut" }}
                   className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-cyan-500 to-blue-500"
                 />
               </div>
-              
+
               {/* Percentage (fake counter) */}
-              <motion.div 
+              <motion.div
                 className="text-slate-500 text-xs font-mono mt-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                [ loading modules... ]
+                [ loading ... ]
               </motion.div>
             </motion.div>
           </div>

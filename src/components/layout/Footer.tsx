@@ -17,7 +17,7 @@ export default function Footer() {
             Akarsh<span className="text-cyan-400">.</span>
           </span>
           <span className="text-xs text-slate-600 ml-2">
-            © {new Date().getFullYear()} — All rights reserved
+            © {new Date().getFullYear()} • Designed & Developed by Akarsh Pandey
           </span>
         </div>
 

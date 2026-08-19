@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import portfolio from "@/data/portfolio";
@@ -21,6 +21,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,11 +52,34 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="group flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 group-hover:scale-125 transition-transform duration-200" />
-          <span className="text-base font-semibold tracking-tight text-white/90 group-hover:text-white transition-colors">
-            Akarsh<span className="text-cyan-400">.</span>
-          </span>
+        <Link href="/" className="group flex items-center gap-3">
+          {/* AP Black Box with Glow */}
+          <div className="flex items-center justify-center w-9 h-9 bg-black rounded border border-white/40 group-hover:border-white shadow-[0_0_8px_rgba(255,255,255,0.1)] group-hover:shadow-[0_0_12px_rgba(255,255,255,0.8)] transition-all duration-300">
+            <span className="text-white font-bold text-sm tracking-wider">AP</span>
+          </div>
+          
+          {/* Shining Akarsh Pandey Text */}
+          <div className="relative inline-block">
+            {/* Base dull text */}
+            <span className="text-base font-semibold tracking-tight text-slate-500">
+              Akarsh Pandey
+            </span>
+            {/* Shining overlay */}
+            <motion.span
+              className="absolute inset-0 text-base font-semibold tracking-tight pointer-events-none"
+              style={{
+                backgroundImage: 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%)',
+                backgroundSize: '200% auto',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+              animate={{ backgroundPosition: ['200% center', '-200% center'] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            >
+              Akarsh Pandey
+            </motion.span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -153,6 +177,12 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="absolute bottom-0 left-0 h-[2px] bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)] origin-left"
+        style={{ scaleX: scrollYProgress }}
+      />
     </motion.nav>
   );
 }
