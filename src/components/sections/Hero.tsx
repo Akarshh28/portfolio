@@ -4,7 +4,6 @@ import { motion,  type Transition } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin, FaDownload, FaArrowRight } from "react-icons/fa";
 import portfolio from "@/data/portfolio";
-import { ECEBackground } from "@/components/ui/ECEBackground";
 
 const fadeUp = (delay = 0) => ({
   initial: {
@@ -24,10 +23,8 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]">
-      {/* The new ECE-themed animated background */}
-      <ECEBackground />
-
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
+      
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 sm:py-32 flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-8 w-full mt-10 lg:mt-0">
         
         {/* Left Side: Text Content */}

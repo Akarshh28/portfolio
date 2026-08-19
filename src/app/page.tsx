@@ -9,11 +9,13 @@ import Research from "@/components/sections/Research";
 import Certifications from "@/components/sections/Certifications";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
+import { GlobalBackground } from "@/components/ui/GlobalBackground";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <GlobalBackground />
       <main className="flex-grow">
         <Hero />
         <About />

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export function ECEBackground() {
+export function ECEBackground({ isGlobal = false }: { isGlobal?: boolean }) {
   const [mounted, setMounted] = useState(false);
   
   useEffect(() => {
@@ -11,9 +11,16 @@ export function ECEBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Deep Dark Base */}
-      <div className="absolute inset-0 bg-[#0A0A0A] z-0" />
+    <div className={`absolute inset-0 overflow-hidden pointer-events-none ${!isGlobal ? 'bg-[#0A0A0A]' : ''}`}>
+      {/* Radial Gradient Overlay (Center Lighting Effect) - only if not global, else GlobalBackground handles it */}
+      {!isGlobal && (
+        <div 
+          className="absolute inset-0 z-0" 
+          style={{
+            background: 'radial-gradient(circle at center, #1A1A1D 0%, #050505 100%)'
+          }}
+        />
+      )}
 
       {/* Subtle ECE Grid / Mesh Overlay */}
       <div 

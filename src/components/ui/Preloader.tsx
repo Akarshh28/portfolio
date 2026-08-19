@@ -22,8 +22,16 @@ export function Preloader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#04070B] overflow-hidden"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0A0A0A] overflow-hidden"
         >
+          {/* Radial Gradient overlay for preloader to match theme */}
+          <div 
+            className="absolute inset-0 z-0 pointer-events-none" 
+            style={{
+              background: 'radial-gradient(circle at center, #1A1A1D 0%, #050505 100%)'
+            }}
+          />
+
           {/* Subtle tech background grid for loader */}
           <div 
             className="absolute inset-0 opacity-10 pointer-events-none"
