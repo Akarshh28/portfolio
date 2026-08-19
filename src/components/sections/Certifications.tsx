@@ -21,7 +21,7 @@ const fadeUp = (delay = 0): Variants => ({
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-28 px-6 bg-[#0D1117]">
+    <section id="certifications" className="py-28 px-6 bg-transparent">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div {...fadeUp()} className="mb-14">

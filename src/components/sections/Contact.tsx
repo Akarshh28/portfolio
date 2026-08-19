@@ -55,7 +55,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-28 px-6 bg-[#0D1117]">
+    <section id="contact" className="py-28 px-6 bg-transparent">
       <div className="max-w-4xl mx-auto">
 
         <motion.div

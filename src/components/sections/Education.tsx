@@ -21,7 +21,7 @@ const fadeUp = (delay = 0): Variants => ({
 
 export default function Education() {
   return (
-    <section id="education" className="py-28 px-6 bg-[#0D1117]">
+    <section id="education" className="py-28 px-6 bg-transparent">
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <motion.div {...fadeUp()} className="mb-14">

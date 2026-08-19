@@ -36,12 +36,12 @@ export default function Hero() {
         </motion.div>
 
         {/* Name */}
-        <motion.h1
+        <motion.h2
           {...fadeUp(0.2)}
           className="text-5xl sm:text-7xl lg:text-8xl font-extrabold tracking-tight text-[var(--text-primary)] mb-6 leading-none"
         >
           Hi, I'm Akarsh <span className="gradient-text">Pandey</span>
-        </motion.h1>
+        </motion.h2>
 
         {/* Primary Headline Hook */}
         <motion.h2

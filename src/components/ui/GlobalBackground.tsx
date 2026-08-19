@@ -7,7 +7,7 @@ export function GlobalBackground() {
   const { scrollY } = useScroll();
 
   // Fade from 90% opacity at top to 15% opacity after scrolling 800px down
-  const opacity = useTransform(scrollY, [0, 800], [0.9, 0.15]);
+  const opacity = useTransform(scrollY, [0, 800], [0.9, 0.30]);
 
   return (
     <div className="fixed inset-0 z-[-1] pointer-events-none">
@@ -26,7 +26,7 @@ export function GlobalBackground() {
         <img
           src="/profile.png"
           alt="Background Portrait"
-          className="w-full h-[80vh] object-cover object-top opacity-30 mix-blend-luminosity"
+          className="w-full h-[80vh] object-cover object-top opacity-60 mix-blend-luminosity"
           style={{
             maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',

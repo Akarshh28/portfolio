@@ -27,7 +27,7 @@ export default function Skills() {
   const secondary = portfolio.techStack.filter((cat) => !cat.highlight);
 
   return (
-    <section id="stack" className="py-28 px-6 bg-[#0D1117]">
+    <section id="stack" className="py-28 px-6 bg-transparent">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
@@ -75,7 +75,7 @@ export default function Skills() {
                   {cat.items.map((item) => (
                     <span
                       key={item}
-                      className="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:text-white transition-all duration-200"
+                      className="text-xs px-3 py-1.5 rounded-lg bg-[#1E1E1E] border border-transparent text-slate-300 hover:text-white transition-all duration-200"
                     >
                       {item}
                     </span>

@@ -42,7 +42,7 @@ const cards = [
 
 export default function About() {
   return (
-    <section id="about" className="py-28 px-6 bg-[#070B11]">
+    <section id="about" className="py-28 px-6 bg-transparent">
       <div className="max-w-6xl mx-auto">
 
         {/* Section Header */}
@@ -69,8 +69,8 @@ export default function About() {
         >
           {[
             {
-              value: "DLMS/COSEM",
-              label: "Firmware Security Research",
+              value: "CGPA: 7.72",
+              label: "Upto 4th sem",
             },
             {
               value: "2+",
@@ -78,7 +78,7 @@ export default function About() {
             },
             {
               value: "C3iHub",
-              label: "Research Intern @ IIT Kanpur",
+              label: "Project Intern @ IIT Kanpur",
             },
           ].map((stat) => (
             <div

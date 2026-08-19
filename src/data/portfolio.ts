@@ -1,12 +1,12 @@
 const portfolio = {
   name: "Akarsh Pandey",
-  title: "AI/ML & Firmware Security Researcher | Project Intern @ C3iHub, IIT Kanpur",
+  //title: "AI/ML & Firmware Security Researcher | Project Intern @ C3iHub, IIT Kanpur",
   college: "Bundelkhand Institute of Engineering & Technology, Jhansi",
   tagline: "Akarsh Pandey — AI/ML & Firmware Security Researcher | Project Intern @ C3iHub, IIT Kanpur",
   role: "Project Intern @ C3iHub, IIT Kanpur",
   internship: "Automated Firmware Analysis on DLMS/COSEM Protocol",
   description:
-    "Electronics & Communication Engineering student with a deep focus on Artificial Intelligence, Machine Learning, Computer Vision, and Cybersecurity. Currently researching firmware security for Advanced Metering Infrastructure at C3iHub, IIT Kanpur — building tools at the intersection of AI and hardware security.",
+    "Fusing embedded intelligence with machine learning to architect secure, resilient systems.",
   resume: "/Akarsh_latest_resume.pdf",
   github: "https://github.com/Akarshh28",
   linkedin: "https://www.linkedin.com/in/akarsh-pandey-0bb6a6301/",
@@ -68,8 +68,8 @@ const portfolio = {
     {
       role: "Project Intern",
       company: "C3iHub, IIT Kanpur",
-      duration: "June 2026 – Nov 2026",
-      type: "Research Internship",
+      duration: "June 2026 – Sep 2026",
+      type: "Project Internship",
       project: "Automated Firmware Analysis on DLMS/COSEM Protocol",
       tech: ["Python", "Ghidra", "Binwalk", "Static Analysis", "Fuzz Testing", "AI/ML"],
       points: [

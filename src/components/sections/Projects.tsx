@@ -22,7 +22,7 @@ const fadeUp = (delay = 0): Variants => ({
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-28 px-6 bg-[#0D1117]">
+    <section id="projects" className="py-28 px-6 bg-transparent">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -86,7 +86,7 @@ export default function Projects() {
                     {project.tools.map((tool) => (
                       <span
                         key={tool}
-                        className="text-xs px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 hover:text-cyan-300 hover:border-cyan-500/30 transition-colors"
+                        className="text-xs px-2.5 py-1 rounded-md bg-[#1E1E1E] border border-transparent text-slate-300 hover:text-cyan-300 transition-colors"
                       >
                         {tool}
                       </span>

@@ -21,7 +21,7 @@ const fadeUp = (delay = 0): Variants => ({
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-28 px-6 bg-[#070B11]">
+    <section id="experience" className="py-28 px-6 bg-transparent">
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <motion.div
