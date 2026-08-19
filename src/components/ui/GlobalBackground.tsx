@@ -19,8 +19,24 @@ export function GlobalBackground() {
         }}
       />
       
-      {/* The ECE graphic that fades on scroll */}
-      <motion.div style={{ opacity }} className="absolute inset-0">
+      <motion.div 
+        style={{ opacity }} 
+        className="absolute inset-0 pointer-events-none"
+      >
+        <img 
+          src="/profile.jpg" 
+          alt="Background Portrait" 
+          className="w-full h-[80vh] object-cover object-top opacity-30 mix-blend-luminosity"
+          style={{
+            maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+            filter: 'contrast(1.2)'
+          }}
+        />
+      </motion.div>
+
+      {/* The elegant sweeping curves graphic that fades on scroll */}
+      <motion.div style={{ opacity }} className="absolute inset-0 pointer-events-none">
         <ECEBackground isGlobal={true} />
       </motion.div>
       
