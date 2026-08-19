@@ -55,8 +55,8 @@ export default function Education() {
                     <span className="text-xs text-slate-500 font-medium bg-white/5 px-3 py-1.5 rounded-full whitespace-nowrap">
                       {edu.duration}
                     </span>
-                    <span className="badge badge-cyan text-xs w-fit">
-                      GPA / Score: {edu.cgpa}
+                    <span className="badge badge-cyan text-xs font-semibold w-fit">
+                      Academic Score: {edu.cgpa}
                     </span>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ export default function Education() {
                       ))}
                     </div>
                   </div>
-                ): null}
+                ) : null}
               </div>
             </motion.div>
           ))}

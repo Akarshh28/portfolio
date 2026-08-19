@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import portfolio from "@/data/portfolio";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -70,27 +69,27 @@ export default function About() {
         >
           {[
             {
-              value: portfolio.cgpa,
-              label: `CGPA · ${portfolio.cgpaSem}`,
+              value: "DLMS/COSEM",
+              label: "Firmware Security Research",
             },
             {
               value: "2+",
-              label: "Projects Built",
+              label: "Core Engineering Projects",
             },
             {
-              value: "1",
-              label: "Research Internship",
+              value: "C3iHub",
+              label: "Research Intern @ IIT Kanpur",
             },
           ].map((stat) => (
             <div
               key={stat.label}
               className="text-center"
             >
-              <p className="text-3xl sm:text-4xl font-bold text-cyan-400">
+              <p className="text-2xl sm:text-3xl font-bold text-cyan-400">
                 {stat.value}
               </p>
 
-              <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 {stat.label}
               </p>
             </div>

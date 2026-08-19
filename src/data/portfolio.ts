@@ -1,8 +1,8 @@
 const portfolio = {
   name: "Akarsh Pandey",
-  title: "B.Tech ECE Student",
+  title: "AI/ML & Firmware Security Researcher | Project Intern @ C3iHub, IIT Kanpur",
   college: "Bundelkhand Institute of Engineering & Technology, Jhansi",
-  tagline: "AI · Machine Learning · Computer Vision · Firmware Security",
+  tagline: "Akarsh Pandey — AI/ML & Firmware Security Researcher | Project Intern @ C3iHub, IIT Kanpur",
   role: "Project Intern @ C3iHub, IIT Kanpur",
   internship: "Automated Firmware Analysis on DLMS/COSEM Protocol",
   description:
@@ -39,39 +39,28 @@ const portfolio = {
 
   techStack: [
     {
-      category: "Programming Languages",
-      icon: "⌨️",
-      items: ["Python", "C", "C++"],
+      category: "Security & Reverse Engineering",
+      icon: "🛡️",
+      items: ["Ghidra", "Binwalk", "Static Analysis", "Fuzz Testing", "DLMS/COSEM Protocol", "Firmware Analysis"],
+      highlight: true,
     },
     {
-      category: "AI & Machine Learning",
+      category: "AI, ML & Computer Vision",
       icon: "🧠",
-      items: ["Scikit-learn", "NumPy", "Pandas", "Matplotlib", "Jupyter Notebook", "Machine Learning"],
+      items: ["PyTorch / TensorFlow", "Scikit-learn", "OpenCV", "MediaPipe", "YOLO", "NumPy & Pandas"],
+      highlight: true,
     },
     {
-      category: "Computer Vision",
-      icon: "👁️",
-      items: ["OpenCV", "MediaPipe", "YOLO"],
+      category: "Embedded Systems & Hardware",
+      icon: "⚡",
+      items: ["C / C++", "ARM Cortex-M", "Serial / UART", "Arduino UNO", "Hardware Security"],
+      highlight: true,
     },
     {
-      category: "Firmware & Security",
-      icon: "🔐",
-      items: ["Ghidra", "Binwalk", "Reverse Engineering", "Static Analysis", "Fuzz Testing"],
-    },
-    {
-      category: "Embedded Systems",
-      icon: "🔌",
-      items: ["Arduino UNO", "HC-05 Bluetooth", "L298N Motor Driver", "Serial Communication", "ARM Cortex-M"],
-    },
-    {
-      category: "Developer Tools",
+      category: "Developer Tools & Environment",
       icon: "🛠️",
-      items: ["Git", "Linux", "VS Code", "MySQL", "CSV/Excel Data Handling"],
-    },
-    {
-      category: "Currently Learning",
-      icon: "📚",
-      items: ["DSA", "Deep Learning"],
+      items: ["Git & GitHub", "Linux CLI", "VS Code", "MySQL", "Jupyter Notebook"],
+      highlight: false,
     },
   ],
 
@@ -97,7 +86,7 @@ const portfolio = {
       degree: "B.Tech in Electronics & Communication Engineering",
       institution: "Bundelkhand Institute of Engineering & Technology, Jhansi",
       duration: "2024 – 2028",
-      cgpa: "7.72(upto 4th Semester)",
+      cgpa: "7.72 CGPA (Up to 4th Semester)",
       coursework: [
         "Digital Signal Processing",
         "Digital Electronics",
@@ -106,13 +95,13 @@ const portfolio = {
       ],
     },
     {
-      degree: "Class XII ",
+      degree: "Class XII",
       institution: "The Aryan International School, Varanasi",
       duration: "2021 – 2023",
       cgpa: "85%",
     },
     {
-      degree: "Class X ",
+      degree: "Class X",
       institution: "International Hindu School, Varanasi",
       duration: "2008 – 2021",
       cgpa: "91%",
@@ -124,11 +113,11 @@ const portfolio = {
       title: "AI-Based Hand Gesture Controlled Robotic Car",
       year: "2025",
       description:
-        "Real-time Computer Vision pipeline enabling touchless robotic control through hand gesture recognition via laptop camera.",
+        "Real-time Computer Vision pipeline enabling contact-free robotic control through gesture recognition and serial communication to embedded hardware.",
       highlights: [
-        "Achieved real-time gesture detection at 30 FPS using MediaPipe Hands landmark model",
-        "Implemented 6 distinct gesture-to-command mappings with serial communication to Arduino UNO",
-        "Integrated L298N motor driver via HC-05 Bluetooth for wireless command execution",
+        "Achieved real-time hand gesture tracking at 30 FPS using MediaPipe Hands 21-landmark topological framework",
+        "Engineered multi-command decoding logic with serial UART transmission to an Arduino UNO microcontroller",
+        "Integrated L298N motor driver with HC-05 Bluetooth module for low-latency wireless command execution",
       ],
       tools: ["Python", "OpenCV", "MediaPipe", "Arduino UNO", "L298N Motor Driver", "HC-05 Bluetooth"],
       github: "https://github.com/Akarshh28/Hand-Gesture-Controlled-Robotics-Car",
@@ -138,14 +127,14 @@ const portfolio = {
       title: "Linear Regression vs Random Forest — World Happiness Dataset",
       year: "2026",
       description:
-        "Comparative ML pipeline predicting global happiness scores, benchmarking linear regression and ensemble methods on socio-economic indicators.", 
-        highlights: [
-        "Conducted end-to-end EDA, feature selection, and correlation mapping on the World Happiness Report dataset using Pandas and NumPy.",
-    "Optimized a Linear Regression model to achieve an outstanding 98.27% R² score, evaluating performance against a tuned Random Forest Regressor.",
-    "Systematically validated model accuracy utilizing statistical evaluation metrics including MAE, MSE, and RMSE.",
-    "Engineered diagnostic data visualizations, mapping regression trends and prediction residuals via Matplotlib and Seaborn."
+        "End-to-end ML engineering pipeline benchmarking parametric OLS regression against non-parametric ensemble models, focusing on feature selection, collinearity diagnosis, and residual optimization.",
+      highlights: [
+        "Executed automated data preprocessing, outlier remediation, and multi-collinearity checks (VIF) on socio-economic metrics",
+        "Engineered feature scaling and selection pipelines comparing parametric linear models against cross-validated ensemble methods",
+        "Evaluated predictive performance using statistical diagnostic metrics including MAE, MSE, RMSE, and residual variance analysis",
+        "Engineered diagnostic data visualizations mapping regression trendlines and prediction error distributions via Matplotlib & Seaborn",
       ],
-      tools: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn", "Jupyter Notebook"],
+      tools: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
       github:
         "https://github.com/Akarshh28/Linear-Regression-Vs-Random-Forest-Comparison-Happiness-Dataset",
       demo: null,

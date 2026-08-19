@@ -23,6 +23,9 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function Skills() {
+  const pillars = portfolio.techStack.filter((cat) => cat.highlight);
+  const secondary = portfolio.techStack.filter((cat) => !cat.highlight);
+
   return (
     <section id="stack" className="py-28 px-6 bg-[#0D1117]">
       <div className="max-w-6xl mx-auto">
@@ -33,49 +36,80 @@ export default function Skills() {
           className="mb-14"
         >
           <p className="section-label mb-3">
-            Technical Stack
+            Technical Architecture
           </p>
 
           <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
-            Tools I{" "}
-            <span className="gradient-text">
-              work with
-            </span>
+            Core <span className="gradient-text">Engineering Pillars</span>
           </h2>
+          <p className="text-slate-400 text-sm sm:text-base mt-3 max-w-2xl">
+            Specialized toolsets structured around firmware security, embedded systems, and machine learning pipelines.
+          </p>
         </motion.div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {portfolio.techStack.map((cat, i) => (
+        {/* 3 High-Impact Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+          {pillars.map((cat, i) => (
             <motion.div
               key={cat.category}
-              {...fadeUp(i * 0.05)}
-              className="glass glass-hover rounded-2xl border border-white/5 p-6 group"
+              {...fadeUp(i * 0.1)}
+              className="glass glass-hover rounded-2xl border border-cyan-500/20 p-7 relative overflow-hidden group flex flex-col justify-between"
             >
-              <div className="flex items-center gap-3 mb-5">
-                <span className="text-2xl">
-                  {cat.icon}
-                </span>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-all pointer-events-none" />
 
-                <h3 className="text-sm font-semibold text-white">
+              <div>
+                <div className="flex items-center justify-between gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-2xl">
+                    {cat.icon}
+                  </div>
+                  <span className="text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300">
+                    Pillar 0{i + 1}
+                  </span>
+                </div>
+
+                <h3 className="text-base sm:text-lg font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                   {cat.category}
                 </h3>
-              </div>
 
-              <div className="flex flex-wrap gap-2">
-                {cat.items.map((item) => (
-                  <span
-                    key={item}
-                    className="text-xs px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-400 hover:border-cyan-400/40 hover:text-white transition-all duration-200"
-                  >
-                    {item}
-                  </span>
-                ))}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {cat.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-xs px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:text-white transition-all duration-200"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-
             </motion.div>
           ))}
         </div>
+
+        {/* Developer Tools & Environment */}
+        {secondary.map((cat) => (
+          <motion.div
+            key={cat.category}
+            {...fadeUp(0.35)}
+            className="glass rounded-2xl border border-white/5 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-xl">{cat.icon}</span>
+              <h4 className="text-sm font-semibold text-white">{cat.category}</h4>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {cat.items.map((item) => (
+                <span
+                  key={item}
+                  className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-400"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
 
       </div>
     </section>
